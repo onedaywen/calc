@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript">
+	
+	console.log(Calc.add(7, 1.50))
+	function test( testTimes ) {
+		
+		let i = 0;
+		while( i < testTimes ) {
+			let testArr = [
+				parseInt( Math.random() * 10), 
+				-parseInt( Math.random() * 10), 
+				parseFloat( Math.random() * 10 ).toFixed(2), 
+				-parseFloat( Math.random() * 10 ).toFixed(2), 
+			];
+			let r1 = parseInt(Math.random() * testArr.length);
+			let r2 = parseInt(Math.random() * testArr.length);
+			// console.log(`${testArr[r1]} - ${testArr[r2]} = ${Calc.subtract(testArr[r1], testArr[r2])}`);
+			console.log(`${testArr[r1]} + ${testArr[r2]} = ${Calc.add(testArr[r1], testArr[r2])}`);
+			i++;
+		}
+	}
+
+
+
+	test(100)
+
+
+
+</script>
+</body>
+</html>
